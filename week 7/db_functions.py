@@ -20,7 +20,7 @@ def create_table():
                 sales BIGINT(15),
                 `date` DATE
             );     
-        """
+        """;
         cursor.execute(add_table)
         connection.commit()
         
@@ -34,7 +34,7 @@ def write_data(curr_name, curr_amount, curr_date):
             INSERT INTO e_data (name, sales, `date`)
             VALUES
             ('{curr_name}', {curr_amount}, '{curr_date}');
-        """
+        """;
         cursor.execute(add_record)
         connection.commit()
 
