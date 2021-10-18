@@ -165,5 +165,33 @@ except:
     wring = 10 + 5
 
 
-#--- Databases
+#------ Databases; Queries
 
+# INSERT INTO customer_info(name, gender, age, location) VALUES ("Dario Scutelli", "Male", 21, "Rome, Italy")
+# INSERT INTO customer_info(name, gender, age, location) VALUES ("Caoimhin Siobhan", "Female", 27, "Leeds, United Kingdom")
+# SELECT * FROM `customer_info`
+# SELECT * FROM `customer_info` ORDER BY `customer_info`.`gender` ASC
+# SELECT * FROM `customer_info` ORDER BY `customer_info`.`gender` DESC
+# SELECT * FROM `customer_info` ORDER BY `customer_info`.`gender` ASC
+# SELECT * FROM `customer_info` ORDER BY `customer_info`.`id` ASC
+# SELECT * FROM `customer_info` ORDER BY `customer_info`.`id` DESC
+# SELECT * FROM `customer_info` ORDER BY `customer_info`.`id` ASC
+# SELECT * FROM `customer_info` LIMIT 2
+# SELECT name, location FROM `customer_info` LIMIT 2
+# SELECT * FROM `customer_info`
+# SELECT * FROM `customer_info`
+# SELECT * FROM customer_info WHERE gender LIKE "F%" AND name LIKE "%mori"
+# SELECT MIN(age) FROM customer_info
+# SELECT MIN(age) AS "minimum age" FROM customer_info
+# SELECT * FROM customer_info WHERE age = (SELECT MIN(age) FROM customer_info)
+# INSERT INTO customer_info(name, gender, age, location) VALUES ("Vera Boticelli", "Female", 23, "Brooklyn, United States of America")
+# SELECT * FROM customer_info
+# SELECT DISTINCT(gender) FROM customer_info
+# SELECT * FROM customer_info WHERE gender = "Female"
+# SELECT * FROM customer_info WHERE gender = "Female" ORDER BY age
+# SELECT * FROM customer_info ORDER BY location DESC
+# UPDATE customer_info SET age = 22 WHERE id = (SELECT id FROM customer_info WHERE age = (SELECT MIN(age) FROM customer_info))
+# SELECT * FROM `customer_info`
+# SELECT * FROM `customer_info`
+# SELECT * FROM customer_info
+# SELECT * FROM customer_info
