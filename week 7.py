@@ -35,3 +35,13 @@
 # SELECT * FROM `purchase` ORDER BY `purchase`.`id` ASC
 # SELECT * FROM purchase WHERE price = (SELECT MAX(price) FROM purchase)
 # SELECT name, location FROM customer_info WHERE id = (SELECT cust_id FROM purchase WHERE price = (SELECT MIN(price) FROM purchase))
+# SELECT * FROM customer_info WHERE location LIKE "%America"
+# SELECT location, AVG(age) AS "average age" FROM customer_info GROUP BY location
+# SELECT * FROM customer_info WHERE location IN ("Italy", "United Kingdom", "United states of America", "Ontario, Canada", "Geneva, Switzerland")
+# SELECT * FROM customer_info WHERE location NOT IN ("Italy", "United Kingdom", "United states of America", "Ontario, Canada", "Geneva, Switzerland")
+# SELECT location, gender, COUNT(gender) AS "gender count" FROM customer_info GROUP BY location, gender
+# SELECT customer_info.name, customer_info.location, purchase.product, purchase.price, customer_info.gender FROM customer_info INNER JOIN purchase ON customer_info.id = purchase.cust_id ORDER BY purchase.price DESC
+# SELECT customer_info.name, customer_info.location, purchase.product, purchase.price, customer_info.gender FROM customer_info LEFT JOIN purchase ON customer_info.id = purchase.cust_id WHERE customer_info.gender = "Male"
+# SELECT customer_info.name, customer_info.location, purchase.product, purchase.price, customer_info.gender FROM customer_info LEFT JOIN purchase ON customer_info.id = purchase.cust_id
+# UNION
+# SELECT customer_info.name, customer_info.location, purchase.product, purchase.price, customer_info.gender FROM customer_info RIGHT JOIN purchase ON customer_info.id = purchase.cust_id
