@@ -42,6 +42,13 @@
 # SELECT location, gender, COUNT(gender) AS "gender count" FROM customer_info GROUP BY location, gender
 # SELECT customer_info.name, customer_info.location, purchase.product, purchase.price, customer_info.gender FROM customer_info INNER JOIN purchase ON customer_info.id = purchase.cust_id ORDER BY purchase.price DESC
 # SELECT customer_info.name, customer_info.location, purchase.product, purchase.price, customer_info.gender FROM customer_info LEFT JOIN purchase ON customer_info.id = purchase.cust_id WHERE customer_info.gender = "Male"
-# SELECT customer_info.name, customer_info.location, purchase.product, purchase.price, customer_info.gender FROM customer_info LEFT JOIN purchase ON customer_info.id = purchase.cust_id
-# UNION
-# SELECT customer_info.name, customer_info.location, purchase.product, purchase.price, customer_info.gender FROM customer_info RIGHT JOIN purchase ON customer_info.id = purchase.cust_id
+## SELECT customer_info.name, customer_info.location, purchase.product, purchase.price, customer_info.gender FROM customer_info LEFT JOIN purchase ON customer_info.id = purchase.cust_id
+## UNION
+## SELECT customer_info.name, customer_info.location, purchase.product, purchase.price, customer_info.gender FROM customer_info RIGHT JOIN purchase ON customer_info.id = purchase.cust_id
+
+
+
+
+
+
+
