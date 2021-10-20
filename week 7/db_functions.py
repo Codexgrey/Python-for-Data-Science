@@ -39,5 +39,18 @@ def write_data(curr_name, curr_amount, curr_date):
         connection.commit()
 
 
+def just_queries():
+    with connection.cursor() as cursor:
+        my_query = """
+            SELECT name, SUM(sales) AS "total sales" FROM e_data GROUP BY name ORDER BY SUM(sales) DESC
+            LIMIT 10;
+        """
+        cursor.execute(my_query)
+        connection.commit()
+        return cursor.fetchall()
+
+
 #- calling create table NOTE: after creating migrations and called migrant function
 create_table()
+output = just_queries()
+print(output)
