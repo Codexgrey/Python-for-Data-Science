@@ -45,10 +45,29 @@
 ## SELECT customer_info.name, customer_info.location, purchase.product, purchase.price, customer_info.gender FROM customer_info LEFT JOIN purchase ON customer_info.id = purchase.cust_id
 ## UNION
 ## SELECT customer_info.name, customer_info.location, purchase.product, purchase.price, customer_info.gender FROM customer_info RIGHT JOIN purchase ON customer_info.id = purchase.cust_id
+# ALTER TABLE table_name CHANGE COLUMN old_name new_name type;
+# CREATE TABLE customer_info ( id INT(10) AUTO_INCREMENT NOT NULL PRIMARY KEY, Full_Name VARCHAR(32) NOT NULL, Gender VARCHAR(15) NOT NULL, Residence VARCHAR(150) NOT NULL, DOB VARCHAR(25) NOT NULL )
+# SELECT * FROM `customer_info`
+# CREATE TABLE transaction_info ( trans_id INT(10) AUTO_INCREMENT NOT NULL PRIMARY KEY, cust_id INT(10), FOREIGN KEY transaction_info(cust_id) REFERENCES customer_info(id), TranS_type VARCHAR(7) NOT NULL, Amount FLOAT(15, 2) NOT NULL, Status VARCHAR(10) NOT NULL, Datestamp DATE NOT NULL )
+# SELECT * FROM `transaction_info`
+# SELECT * FROM `transaction_info`
+# SELECT * FROM `transaction_info`
+# ALTER TABLE transaction_info CHANGE COLUMN TranS_type Trans_type VARCHAR(7)
+# SELECT * FROM `transaction_info`
+# SELECT * FROM `transaction_info`
+# # CREATE TABLE account_info (
+#   acc_id INT(10) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+#   cust_id INT(10),
+#   FOREIGN KEY account_info(cust_id) REFERENCES customer_info(id), 
+#   Acc_Number INT(10) NOT NULL,
+#   Acc_Balance FLOAT(15, 2) NOT NULL, 
+#   Acc_Pin INT(5) NOT NULL
+# )
+# ALTER TABLE account_info AUTO_INCREMENT = 1
+# ALTER TABLE transaction_info AUTO_INCREMENT = 1
 
 
-
-
+import random as rd
 
 
 

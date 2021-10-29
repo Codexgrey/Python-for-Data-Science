@@ -29,18 +29,13 @@ for soup in soupList:
         sneaker_oldprice = None
 
     # The new price
-    
-
-
-
     break
 
 
 
 
 
-str = "today"
-print(str.replace("z", "b"))
+
 
 
 
