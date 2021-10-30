@@ -41,8 +41,8 @@ for soup in list_of_soups:
         old_div = soup.find("div", attrs = {"class" : "old"})
         old_price_raw = old_div.text
         if "-" in old_price_raw:    #if there is a range
-            old_lp = int(old_price_raw.split(" - ")[0].lstrip("₦ ").replace(",", ""))
-            old_hp = int(old_price_raw.split(" - ")[1].lstrip("₦ ").replace(",", ""))
+            old_lp = int(old_price_raw.split(" - ")[0].lstrip("₦ ").replace(",", "")) #lp - low price
+            old_hp = int(old_price_raw.split(" - ")[1].lstrip("₦ ").replace(",", "")) #hp - high price
             sneaker_old_price = None
         else:    #if there is a single price
             sneaker_old_price = int(old_price_raw.lstrip("₦ ").replace(",", ""))
