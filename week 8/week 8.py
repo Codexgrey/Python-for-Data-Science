@@ -23,7 +23,8 @@ first_soup = BeautifulSoup(my_response.content, features = "lxml")
 
 second_soup = first_soup.find("div", attrs = {"class" : "-paxs row _no-g _4cl-3cm-shs"})
 
-list_of_soups = second_soup.find_all("article", attrs = {"class" : "prd _fb col c-prd"})
+list_of_soups = second_soup.find_all("article", attrs = {"class" : "prd _fb col c-prd"}) 
+# print(len(list_of_soups))
 
 
 
